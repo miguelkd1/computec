@@ -1,0 +1,84 @@
+/* Panel Control Styles */
+.panel-control {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.panel-control .panel-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.panel-control .panel-header h2 {
+    font-size: 36px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+.panel-control .panel-header p {
+    font-size: 18px;
+    color: #888;
+}
+
+/* Control Grid */
+.control-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Control Cards */
+.control-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.control-card:hover {
+    background: #252525;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.control-card h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+}
+
+.control-card p {
+    font-size: 16px;
+    color: #888;
+    margin: 0 0 25px 0;
+    line-height: 1.5;
+}
+
+.btn-action {
+    background: transparent;
+    border: 1px solid rgba(102, 126, 234, 0.5);
+    color: #667eea;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: #667eea;
+    transform: translateX(5px);
+} 

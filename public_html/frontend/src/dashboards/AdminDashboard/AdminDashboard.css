@@ -1,0 +1,369 @@
+/* Admin Dashboard Styles */
+.admin-dashboard {
+    min-height: 100vh;
+    background: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+}
+
+/* Dashboard Header Main (Overview) */
+.dashboard-header-main {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.dashboard-header-main h1 {
+    font-size: 56px;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.dashboard-header-main p {
+    font-size: 20px;
+    color: #cccccc;
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+/* Dashboard Header (When in sections) */
+.dashboard-header {
+    background: rgba(20, 20, 20, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 40px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.back-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-left h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 8px 20px 8px 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-menu:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.user-name {
+    font-size: 14px;
+}
+
+.logout-btn {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #ff6b6b;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.logout-btn:hover {
+    background: rgba(220, 53, 69, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Dashboard Main Content */
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 40px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: #1a1a1a;
+    border: none;
+    border-radius: 12px;
+    padding: 50px 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-card:hover {
+    background: #252525;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+.dashboard-card h3 {
+    margin: 0 0 40px 0;
+    font-size: 32px;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+.card-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.card-items p {
+    margin: 0;
+    color: #aaaaaa;
+    font-size: 18px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover .card-items p {
+    color: #ffffff;
+    transform: translateX(8px);
+}
+
+/* Panel Styles Override for dark theme */
+.dashboard-main .users-panel {
+    background: transparent;
+    padding: 40px;
+    min-height: auto;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.dashboard-main .users-panel .panel-header {
+    background: #1a1a1a;
+    border: none;
+}
+
+.dashboard-main .users-panel .users-table-container {
+    background: #1a1a1a;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 20px;
+    }
+    
+    .dashboard-header-main h1 {
+        font-size: 36px;
+        letter-spacing: 5px;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    .dashboard-card {
+        min-height: 250px;
+        padding: 40px 30px;
+    }
+    
+    .dashboard-card h3 {
+        font-size: 28px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .header-left,
+    .header-right {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-card {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.dashboard-card:nth-child(1) { animation-delay: 0.1s; }
+.dashboard-card:nth-child(2) { animation-delay: 0.2s; }
+.dashboard-card:nth-child(3) { animation-delay: 0.3s; }
+.dashboard-card:nth-child(4) { animation-delay: 0.4s; }
+.dashboard-card:nth-child(5) { animation-delay: 0.5s; }
+.dashboard-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Coming Soon Styles */
+.coming-soon {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.coming-soon .panel-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.coming-soon .panel-header h2 {
+    font-size: 36px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+.coming-soon .panel-header p {
+    font-size: 18px;
+    color: #888;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    background: #252525;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #888;
+    margin: 0 0 25px 0;
+    line-height: 1.5;
+}
+
+.btn-preview {
+    background: rgba(108, 117, 125, 0.2);
+    border: 1px solid rgba(108, 117, 125, 0.3);
+    color: #aaa;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+.btn-preview:hover {
+    background: rgba(108, 117, 125, 0.3);
+} 
